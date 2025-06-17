@@ -1,0 +1,147 @@
+html{
+scroll-behavior:smooth;
+}
+#body{
+background-color:#d3d3d3;
+color:black;
+font-size:medium;
+font-family:Arial,Helvetica,sans-serif;
+}
+#settings,#title,.courses,.center,.end,.language{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+}
+.language{
+font-weight:bold;
+text-decoration:underline;
+padding-bottom:10px;
+}
+#settings_box1,#settings_box2,.course_set{
+border:3px solid #cc0000;
+border-radius:10%;
+padding:4px;
+margin:10px;
+}
+#settings_box1,#settings_box2{
+width:200px;
+height:215px;
+}
+#settings h2,.course_set h3{
+border:none;
+display:flex;
+justify-content:center;
+}
+h1,h2,h3,h4,h5{
+border:3px solid #cc0000;
+display:inline-block;
+padding:3px;
+text-align:center;
+}
+button{
+cursor:pointer;
+margin-bottom:8px;
+}
+#defaultMode{
+background-color:lightgray;
+color:black;
+border:3px solid #cc0000;
+padding:10px;
+border-radius:10%;
+}
+#lightMode{
+background-color:white;
+color:black;
+border:3px solid red;
+padding:10px;
+border-radius:10%;
+}
+#darkMode{
+background-color:#121212;
+color:#E0E0E0;
+border:3px solid #82B1FF;
+padding:10px;
+border-radius:10%;
+}
+#darkMode2{
+background-color:black;
+color:#00B300;
+border:3px solid blue;
+padding:10px;
+border-radius:10%;
+}
+#customMode{
+border:3px solid purple;
+padding:8px;
+border-radius:10%;
+}
+a:hover#customMode{
+text-decoration:none;
+}
+a{
+text-decoration:none;
+color:#9D1B9D;
+}
+a:hover{
+text-decoration:underline;
+}
+li{
+padding-top:5px;
+}
+img{
+max-width:90%;
+border:3px solid #cc0000;
+display:block;
+margin:0 auto;
+}
+table{
+border-collapse:collapse;
+width:fit-content;
+}
+table,th,td{
+border:1px solid #cc0000;
+padding:10px;
+}
+#ending{
+background-color:grey;
+color:black;
+padding:5px;
+display:flex;
+justify-content:center;
+}
+.math-container{
+overflow-x:auto;
+white-space:nowrap;
+width:100%;
+padding-bottom:10px;
+}
+pre,code{
+padding:2px 3px 2px 3px;
+font-size:large;
+border-radius:5px;
+background-color:black;
+color:white;
+}
+pre{
+border:1px solid #cc0000;
+padding:3px;
+width:min-content;
+}
+code{
+line-height:1.5;
+}
+#programming_course{
+main{
+b,u,i,s{all:unset;}
+b{color:#FF29FF;}
+u{color:#82B1FF;}
+i{color:#00B300;}
+s{display:inline;color:orange;}
+}}
+#copyButton,#applyCustom,#reset{
+background-color:#e9e9ed;
+border:2px solid black;
+border-radius:15%;
+color:black;
+padding:3px;
+}
