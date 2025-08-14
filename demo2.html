@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Course Library - freemath</title>
+<meta name="description" content="Over 50 math, computer science and programming courses, including Calculus, Linear Algebra, Geometry, Probability, Statistics, C++, Python, HTML, CSS and more.">
+<meta name="author" content="George Makris">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="alternate" hreflang="en" href="https://yourdomain.com/library/"> <!--change-->
+<link rel="alternate" hreflang="el-GR" href="https://yourdomain.com/library/gr/"> <!--change-->
+<link rel="canonical" href="https://yourdomain.com/library/"> <!--change-->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.v1.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.v1.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.v1.png">
+<link rel="manifest" href="/site.v1.webmanifest">
+<meta property="og:site_name" content="freemath">
+<meta property="og:title" content="Course Library - freemath">
+<meta property="og:description" content="Over 50 math, computer science and programming courses, including Calculus, Linear Algebra, Geometry, Probability, Statistics, C++, Python, HTML, CSS and more.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yourdomain.com/library"> <!--change-->
+<style>
+html{
+scroll-behavior:smooth;
+-webkit-text-size-adjust:100%;
+text-size-adjust:100%;
+}
+body{
+background-color:#d3d3d3;
+color:black;
+font-size:medium;
+font-family:Arial,Helvetica,sans-serif;
+}
+#settings,#title,.courses,.center,.end,.language{
+display:flex;
+justify-content:space-around;
+flex-wrap:wrap;
+}
+.language{
+font-weight:bold;
+text-decoration:underline;
+padding-bottom:10px;
+}
+#settings_box1,#settings_box2,.course_set{
+border:3px solid #cc0000;
+border-radius:10%;
+padding:4px;
+margin:10px;
+}
+#settings_box1,#settings_box2{
+width:215px;
+height:215px;
+}
+#settings h2,.course_set h3{
+border:none;
+display:flex;
+justify-content:center;
+}
+h1,h2,h3,h4,h5{
+border:3px solid #cc0000;
+display:inline-block;
+padding:3px;
+text-align:center;
+}
+h5{font-size:medium;}
+button{
+cursor:pointer;
+margin-bottom:8px;
+font-weight:bold;
+}
+#defaultMode{
+background-color:lightgray;
+color:black;
+border:3px solid #cc0000;
+padding:9px;
+border-radius:10%;
+}
+#lightMode{
+background-color:white;
+color:black;
+border:3px solid red;
+padding:9px;
+border-radius:10%;
+}
+#darkMode{
+background-color:#121212;
+color:#E0E0E0;
+border:3px solid #82B1FF;
+padding:9px;
+border-radius:10%;
+}
+#darkMode2{
+background-color:black;
+color:#00cc00;
+border:3px solid blue;
+padding:9px;
+border-radius:10%;
+}
+#customMode{
+border:3px solid #cc0000;
+padding:9px;
+border-radius:10%;
+font-weight:bold;
+}
+a:hover#customMode{text-decoration:none;}
+a{
+text-decoration:none;
+color:#9D1B9D;
+}
+a:hover{text-decoration:underline;}
+li{padding-top:5px;}
+img{
+max-width:90%;
+border:3px solid #cc0000;
+display:block;
+margin:0 auto;
+}
+table{
+border-collapse:collapse;
+width:fit-content;
+}
+table,th,td{
+border:2px solid #cc0000;
+padding:10px;
+}
+#ending{
+background-color:grey;
+color:black;
+padding:5px;
+display:flex;
+justify-content:center;
+}
+.math-container{
+overflow-x:auto;
+white-space:nowrap;
+width:100%;
+padding-bottom:10px;
+}
+pre,code{
+padding:2px 3px 2px 3px;
+border-radius:5px;
+font-size:large;
+background-color:black;
+color:white;
+}
+pre{
+border:2px solid #cc0000;
+padding:3px;
+width:min-content;
+}
+code{line-height:1.5;}
+#programming_course main b{
+all:unset;
+color:#FF29FF;
+}
+#programming_course main u{
+all:unset;
+color:#82B1FF;
+}
+#programming_course main i{
+all:unset;
+color:#00cc00;
+}
+#programming_course main s{
+all:unset;
+color:orange;
+}
+#programming_course .b{
+font-weight:bold;
+}
+#copyButton,#applyCustom,#reset,#submitButton{
+background-color:#e9e9ed;
+border:3px solid #cc0000;
+border-radius:15%;
+color:black;
+padding:3px;
+}
+#back-to-top {
+background-color:black;
+color:#9D1B9D;
+font-weight:bold;
+position:fixed;
+bottom:3px;
+right:3px;
+padding:8px;
+border-radius:5px;
+z-index:1000;
+transition:opacity 0.3s ease;
+}
+#back-to-top.hidden{
+opacity:0;
+pointer-events:none;
+}
+</style>
+</head>
+<body>
+<header>
+<div id="title">
+<h1>Course Library</h1>
+</div>
+<hr>
+<div id="settings">
+<div id="settings_box1">
+<h2>Language:</h2>
+<p class="language">ENGLISH</p>
+<hr>
+<p class="center">Other languages:</p>
+<a href="/library/gr/" class="language">ΕΛΛΗΝΙΚΑ</a>
+</div>
+<div id="settings_box2">
+<h2>Modes:</h2>
+<div class="center">
+<button id="defaultMode">default mode</button>
+<button id="lightMode">light mode</button>
+</div>
+<div class="center">
+<button id="darkMode">dark mode</button>
+<button id="darkMode2">dark mode 2</button>
+</div>
+<div class="center">
+<a href="/custom-mode/" id="customMode">custom mode</a>
+</div>
+<script>
+window.addEventListener("DOMContentLoaded",function(){
+let bg=localStorage.getItem("backgroundColor");
+let tc=localStorage.getItem("textColor");
+let bc=localStorage.getItem("borderColor");
+let lc=localStorage.getItem("linkColor");
+let bttbc=localStorage.getItem("backToTopBackgroundColor");
+let bttlc=localStorage.getItem("backToTopLinkColor");
+if(bg){document.body.style.backgroundColor=bg;}
+if(tc){document.body.style.color=tc;}
+if(bc){styleBorders(bc);}
+if(lc){styleLinks(lc);}
+if(bttbc && bttlc){styleBackToTopButton(bttbc,bttlc);}
+});
+
+function styleBorders(x){
+const elements=[
+document.getElementById("settings_box1"),
+document.getElementById("settings_box2"),
+document.getElementById("customMode"),
+document.getElementById("copyButton"),
+document.getElementById("applyCustom"),
+document.getElementById("reset"),
+document.getElementById("submitButton"),
+...document.getElementsByClassName("courses"),
+...document.getElementsByClassName("course_set"),
+...document.getElementsByClassName("borderVisible"),
+...document.getElementsByTagName("h1"),
+...document.getElementsByTagName("h2"),
+...document.getElementsByTagName("h3"),
+...document.getElementsByTagName("h4"),
+...document.getElementsByTagName("h5"),
+...document.getElementsByTagName("img"),
+...document.getElementsByTagName("table"),
+...document.getElementsByTagName("td"),
+...document.getElementsByTagName("th"),
+...document.getElementsByTagName("pre")];
+elements.forEach(el=>{if(el){el.style.borderColor=x;}});
+}
+function styleLinks(x){
+const elements=[...document.getElementsByTagName("a")];
+elements.forEach(el=>{if(el && el.id!=="back-to-top"){el.style.color=x;}});
+}
+function styleBackToTopButton(x,y){
+z=document.getElementById("back-to-top");
+z.style.backgroundColor=x;
+z.style.color=y;
+}
+function setMode(a,b,c,d,e,f){
+document.body.style.backgroundColor=a;
+document.body.style.color=b;
+localStorage.setItem("backgroundColor",a);
+localStorage.setItem("textColor",b);
+styleBorders(c);
+localStorage.setItem("borderColor",c);
+styleLinks(d);
+localStorage.setItem("linkColor",d);
+styleBackToTopButton(e,f);
+localStorage.setItem("backToTopBackgroundColor",e);
+localStorage.setItem("backToTopLinkColor",f);
+}
+
+document.getElementById("defaultMode").addEventListener("click",function(){
+setMode("#d3d3d3","black","#cc0000","#9d1b9d","black","#c922c9");
+});
+document.getElementById("lightMode").addEventListener("click",function(){
+setMode("white","black","red","#3333ff","black","#c922c9");
+});
+document.getElementById("darkMode").addEventListener("click",function(){
+setMode("#121212","#e0e0e0","#82b1ff","#82b1ff","#d3d3d3","#9d1b9d");
+});
+document.getElementById("darkMode2").addEventListener("click",function(){
+setMode("black","#00cc00","blue","#c922c9","#d3d3d3","#9d1b9d");
+});
+</script>
+</div>
+</div>
+<hr>
+</header>
+<main>
+<p>The library has 3 levels:</p>
+<ul>
+<li><a href="#level1">Level 1</a>: contains highschool math courses.</li>
+<li><a href="#level2">Level 2</a>: contains college and university math courses.</li>
+<li><a href="#level3">Level 3</a>: contains programming, web development and computer science courses.</li>
+</ul>
+<hr>
+<h2>Important note</h2>
+<p>Some courses contain specific statements that are designed to end on the same line where they start even if they don't fully fit the screen so that their content is not split into multiple lines. This is done for better visibility and clarity.</p>
+<p>On mobile devices, you will be able to scroll horizontally such statements to view the hidden parts, while on computers, a scrollbar will appear, allowing you to scroll horizontally using that.</p>
+<p>There will be an exclamation mark <b>(!)</b> at the beginning of such statements to indicate this feature, however, if the entire statement is already visible on your screen, scrolling will not work, even if the exclamation mark is present.</p>
+<p>In courses where this feature is used, we'll leave a reminder at the beginning of the page.</p>
+<hr>
+<h2 id="level1">Level 1</h2>
+<div class="courses">
+<div class="course_set">
+<h3>Algebra</h3>
+<ul>
+<li><a href="/introductory-concepts/">Introductory Concepts</a></li>
+<li><a href="/equations/">Equations</a></li>
+<li><a href="/inequalities/">Inequalities</a></li>
+<li><a href="/systems/">2x2 & 3x3 Systems</a></li>
+<li><a href="/polynomials/">Polynomials</a></li>
+<li><a href="/logarithms/">Exponents & Logarithms</a></li>
+</ul>
+</div>
+<div class="course_set">
+<h3>Geometry</h3>
+<ul>
+<li><a href="/trigonometry/">Trigonometry</a></li>
+<li><a href="/vectors/">Vectors</a></li>
+<li><a href="/straight-lines/">Straight Lines</a></li>
+<li><a href="/conic-sections/">Conic sections</a></li>
+<li><a href="/geometry-I/">Euclidean Geometry I</a></li>
+<li><a href="/geometry-II/">Euclidean Geometry II</a></li>
+</ul>
+</div>
+<div class="course_set">
+<h3>Intro To Calculus</h3>
+<ul>
+<li><a href="/functions/part1/">Functions</a></li>
+<li><a href="/limits/">Limits</a></li>
+<li><a href="/functions/part2/">Continuity Of Functions</a></li>
+<li><a href="/derivatives/">Derivatives</a></li>
+<li><a href="/integrals/">Integrals</a></li>
+</ul>
+</div>
+</div>
+<hr>
+<h2 id="level2">Level 2</h2>
+<div class="courses">
+<div class="course_set">
+<h3>Foundations Of Mathematics</h3>
+<ul>
+<li><a href="/foundational-math-concepts/">Foundational Math Concepts</a></li>
+<li><a href="/number-theory/">Number Theory</a></li>
+<li><a href="/algebraic-structures/">Algebraic Structures</a></li>
+<li><a href="/metric-spaces/">Metric Spaces And Their Topology</a></li>
+<li><a href="/set-theory/">Set Theory</a></li>
+<li><a href="/graph-theory/">Graph Theory</a></li>
+<li><a href="/computation-theory/">Computation Theory</a></li>
+</ul>
+</div>
+<div class="course_set">
+<h3>Analysis</h3>
+<ul>
+<li><a href="/calculus-I/">Calculus I</a></li>
+<li><a href="/calculus-II/">Calculus II</a></li>
+<li><a href="/calculus-III/">Calculus III</a></li>
+<li><a href="/calculus-IV/">Calculus IV</a></li>
+<li><a href="/differential-equations/">Differential Equations</a></li>
+<li><a href="/complex-analysis/">Complex Analysis</a></li>
+</ul>
+</div>
+<div class="course_set">
+<h3>Linear Algebra & Geometry</h3>
+<ul>
+<li><a href="/linear-algebra-I/">Linear Algebra I</a></li>
+<li><a href="/linear-algebra-II/">Linear Algebra II</a></li>
+<li><a href="/analytic-geometry/">Analytic Geometry</a></li>
+<li><a href="/euclidean-geometry/">Euclidean Geometry</a></li>
+<li><a href="/non-euclidean-geometries/">Non Euclidean Geometries</a></li>
+<li><a href="/differential-geometry/">Differential Geometry</a></li>
+</ul>
+</div>
+<div class="course_set">
+<h3>Applied Mathematics</h3>
+<ul>
+<li><a href="/numerical-analysis/">Introduction To Numerical Analysis</a></li>
+<li><a href="/probability/">Introduction To Probability</a></li>
+<li><a href="/statistics/">Introduction To Statistics</a></li>
+<li><a href="/classical-mechanics/">Classical Mechanics</a></li>
+<li><a href="/biomathematics/">Biomathematics</a></li>
+<li><a href="/meteorology/">Meteorology</a></li>
+<li><a href="/astronomy/">Astronomy</a></li>
+</ul>
+</div>
+</div>
+<hr>
+<h2 id="level3">Level 3</h2>
+<div class="courses">
+<div class="course_set">
+<h3>Computer Science</h3>
+<ul>
+<li><a href="/numerical-systems/">Numerical Systems</a></li>
+<li><a href="/algorithms/">Algorithms</a></li>
+<li><a href="/data-structures/">Data Structures</a></li>
+<li><a href="/databases/">Databases</a></li>
+</ul>
+</div>
+<div class="course_set">
+<h3>Programming</h3>
+<ul>
+<li><a href="/object-oriented-programming/">Object Oriented Programming</a></li>
+<li><a href="/linear-programming/">Linear Programming</a></li>
+<li><a href="/cplusplus/">C++</a></li>
+<li><a href="/python/">Python</a></li>
+</ul>
+</div>
+<div class="course_set">
+<h3>Static Site Development</h3>
+<ul>
+<li><a href="/introduction-to-web-development/">How To Make A Static Website</a></li>
+<li><a href="/html/">HTML</a></li>
+<li><a href="/css/">CSS</a></li>
+<li><a href="/javascript/">JavaScript</a></li>
+<li><a href="/mathjax-commands/">MathJax Commands</a></li>
+</ul>
+</div>
+<div class="course_set">
+<h3>freemath Museum</h3>
+<ul>
+<li><a href="/museum-entrance/">Entrance</a></li>
+</ul>
+</div>
+</div>
+<hr>
+</main>
+<footer>
+<a href="#" id="back-to-top">Back to top</a>
+<div class="end"><a href="#">Back to top</a></div>
+<div class="end"><a href="/">Homepage</a></div>
+<hr>
+<div id="ending">&copy; freemath. All rights reserved.</div>
+</footer>
+<script>
+//Mathjax:
+
+let script=document.createElement('script');
+script.src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js";
+script.async=true;
+script.onload=function(){console.log("MathJax loaded successfully from jsDelivr.");};
+script.onerror=function(){
+console.warn("jsDelivr CDN failed. Trying cdnjs.");
+let fallbackScript=document.createElement('script');
+fallbackScript.src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js";
+fallbackScript.async=true;
+fallbackScript.onload=function(){console.log("MathJax loaded successfully from cdnjs.");};
+fallbackScript.onerror=function(){console.error("Both CDNs failed. MathJax could not be loaded.");};
+document.head.appendChild(fallbackScript);
+};
+document.head.appendChild(script);
+
+//Back to top button:
+
+const backToTopButton=document.getElementById("back-to-top");
+const main=document.querySelector("main");
+const footer=document.querySelector("footer");
+function updateBackToTopVisibility(){
+const footerTop=footer.getBoundingClientRect().top;
+const windowHeight=window.innerHeight;
+const mainTop=main.getBoundingClientRect().top;
+if (mainTop>=0 || footerTop<=windowHeight){backToTopButton.classList.add("hidden");}
+else {backToTopButton.classList.remove("hidden");}
+};
+window.addEventListener("scroll",updateBackToTopVisibility);
+updateBackToTopVisibility();
+</script>
+</body>
+</html>
