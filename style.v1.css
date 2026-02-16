@@ -259,7 +259,7 @@ display:block;
 text-align:center;
 }
 #accessibility-link:focus{top:15rem;left:1px;}
-/*
+
 @media(max-width:600px){
 #settings_box1,#settings_box2{max-width:245px;}
 #settings button{max-width:170px;}
@@ -280,4 +280,3 @@ button{font-size:1rem;}
 .logo-container{right:0rem;}
 .dropdown-menu{left:0.5rem;}
 }
-*/
