@@ -943,7 +943,6 @@
 </main>
 <footer>
 <hr class="br">
-<a href="#" id="back-to-top">Επιστροφή πάνω</a>
 <div id="end-of-page">
 <div class="end-of-page-component" id="technical-issues">
 <h2>Τεχνικά Προβλήματα</h2>
@@ -999,12 +998,6 @@ if(cLs){body.style.letterSpacing=cLs;changes++;}
 if(changes===0){localStorage.removeItem("settingsChanged");}
 });
 }
-}
-{
-const a=document.getElementById("back-to-top");
-function updateBackToTopVisibility(){if(document.querySelector("main").getBoundingClientRect().top>=0||document.querySelector("footer").getBoundingClientRect().top<=window.innerHeight){a.classList.add("hidden");}else{a.classList.remove("hidden");}};
-window.addEventListener("scroll",updateBackToTopVisibility);
-updateBackToTopVisibility();
 }
 function styleBorders(x){document.querySelectorAll("#settings_box1,#settings_box2,#customMode,.courses,.course_set,.borderVisible,.homepage_box,h1,h2,h3,h4,h5,h6,img,table,td,th,pre").forEach(el=>el.style.borderColor=x);}
 function styleLinks(x){document.querySelectorAll("a").forEach(el=>{if(el.id!=="back-to-top"&&el.className!=="doNotStyle"){el.style.color=x;}});}
