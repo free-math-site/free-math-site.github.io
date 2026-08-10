@@ -49,7 +49,7 @@ input[type="color"]{background-color:white;}
 @keyframes shake{0%{transform:translateX(0);}25%{transform:translateX(-3px);}50%{transform:translateX(3px);}75%{transform:translateX(-2px);}100%{transform:translateX(0);}}
 
 .math-container{overflow-x:auto;overflow-y:hidden;white-space:nowrap;width:100%;padding-bottom:0.625rem;display:block;}
-div.math-container{overflow-x:hidden;}
+.math-container table{overflow-x:hidden;}
 .big{font-size:1.3rem;}
 .consolas,.consolas2,#message{font-family:Consolas,monospace;}
 .consolas{font-size:1.13em;letter-spacing:-0.03rem;}
