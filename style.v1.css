@@ -101,7 +101,7 @@ code{display:inline-block;padding:0 0.1875rem;margin:0.1rem 0;}
 
 
 @media(max-width:600px){#settings_box1,#settings_box2{max-width:245px;}#settings button{max-width:170px;}}
-@media(max-width:400px){html{font-size:18px;}h1{font-size:2rem;}h2{font-size:1.6rem;}h3{font-size:1.3rem;}h4{font-size:1.1rem;}h5{font-size:1rem;}h6{font-size:0.9rem;}button{font-size:16px;}}
+@media(max-width:400px){html{font-size:16px;}body{font-size:18px;}h1{font-size:2em;}h2{font-size:1.6em;}h3{font-size:1.3em;}h4{font-size:1.1em;}h5{font-size:1em;}h6{font-size:0.9em;}button{font-size:1rem;}}
 @media(max-width:260px){.logo-container{right:0rem;}.dropdown-menu{left:0.5rem;}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
 @media(prefers-color-scheme:dark){body{background-color:black;color:#00c000;}a{color:#c922c9;}#settings_box1,#settings_box2,.course_set,.homepage_box,#customMode,h1,h2,h3,h4,h5,h6,img,pre,table,th,td{border-color:#0000aa;}}
