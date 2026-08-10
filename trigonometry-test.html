@@ -401,15 +401,7 @@
 <p>Συνήθως αποτελούνται από άπειρα δεκαδικά ψηφία, και προφανώς δεν γίνεται να τους θυμόμαστε απ' έξω.</p>
 <p>Υπάρχουν όμως κάποιες βασικές γωνίες, οι οποίες δίνουν "καλούς" τριγωνομετρικούς αριθμούς, τους οποίους είναι καλό να θυμόμαστε.</p>
 <p>Συγκεκριμένα:</p>
-<div class="math-container"><table>
-<thead><tr><th scope="col">Γωνία</th><th scope="col">\(0\) \((0^{\circ})\)</th><th scope="col">\(\cfrac{π}{6}\) \((30^{\circ})\)</th><th scope="col">\(\cfrac{π}{4}\) \((45^{\circ})\)</th><th scope="col">\(\cfrac{π}{3}\) \((60^{\circ})\)</th><th scope="col">\(\cfrac{π}{2}\) \((90^{\circ})\)</th><th scope="col">\(π\) \((180^{\circ})\)</th><th scope="col">\(\cfrac{3π}{2}\) \((270^{\circ})\)</th><th scope="col">\(2π\) \((360^{\circ})\)</th></tr></thead>
-<tbody>
-<tr><td scope="row">Ημίτονο</td><td>\(0\)</td><td>\(\cfrac{1}{2}\)</td><td>\(\cfrac{\sqrt{2}}{2}\)</td><td>\(\cfrac{\sqrt{3}}{2}\)</td><td>\(1\)</td><td>\(0\)</td><td>\(-1\)</td><td>\(0\)</td></tr>
-<tr><td scope="row">Συνημίτονο</td><td>\(1\)</td><td>\(\cfrac{\sqrt{3}}{2}\)</td><td>\(\cfrac{\sqrt{2}}{2}\)</td><td>\(\cfrac{1}{2}\)</td><td>\(0\)</td><td>\(-1\)</td><td>\(0\)</td><td>\(1\)</td></tr>
-<tr><td scope="row">Εφαπτομένη</td><td>\(0\)</td><td>\(\cfrac{\sqrt{3}}{3}\)</td><td>\(1\)</td><td>\(\sqrt{3}\)</td><td>Δεν ορίζεται</td><td>\(0\)</td><td>Δεν ορίζεται</td><td>\(0\)</td></tr>
-<tr><td scope="row">Συνεφαπτομένη</td><td>Δεν ορίζεται</td><td>\(\sqrt{3}\)</td><td>\(1\)</td><td>\(\cfrac{\sqrt{3}}{3}\)</td><td>\(0\)</td><td>Δεν ορίζεται</td><td>\(0\)</td><td>Δεν ορίζεται</td></tr>
-</tbody>
-</table></div>
+
 <p>Υπάρχουν και άλλες γωνίες με "καλούς" τριγωνομετρικούς αριθμούς, όμως δεν θα τις αναφέρουμε τώρα, καθώς οι τριγωνομετρικοί τους αριθμοί μπορούν να υπολογιστούν μέσω αναγωγής στο πρώτο τεταρτημόριο, για την οποία θα μιλήσουμε αργότερα.</p>
 <h3 id="possible-values">Δυνατές Τιμές Τριγωνομετρικών Αριθμών</h3>
 <p>Όπως είδαμε, οι τιμές των τριγωνομετρικών αριθμών προκύπτουν από τις συντεταγμένες των σημείων του τριγωνομετρικού κύκλου.</p>
@@ -943,6 +935,7 @@
 </main>
 <footer>
 <hr class="br">
+<a href="#" id="back-to-top">Επιστροφή πάνω</a>
 <div id="end-of-page">
 <div class="end-of-page-component" id="technical-issues">
 <h2>Τεχνικά Προβλήματα</h2>
@@ -1032,6 +1025,12 @@ a.setAttribute('aria-expanded',false);
 b.classList.remove('active');
 }});
 }
+}
+{
+const a=document.getElementById("back-to-top");
+function updateBackToTopVisibility(){if(document.querySelector("main").getBoundingClientRect().top>=0||document.querySelector("footer").getBoundingClientRect().top<=window.innerHeight){a.classList.add("hidden");}else{a.classList.remove("hidden");}};
+window.addEventListener("scroll",updateBackToTopVisibility);
+updateBackToTopVisibility();
 }
 </script>
 </html>
